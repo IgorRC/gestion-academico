@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ingreso de Notas Académicas</title>
+    <title>ACADEMICO | nota</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/public/icon/academico.png" type="image/x-icon" /> <!-- Favicon -->
   </head>
   <body>
     <div class="notas-container">
       <div class="container">
         <div class="title-modal">
-          <h1>Ingreso de Notas Académicas</h1>
+          <h1>Ingreso de Nota Académica</h1>
         </div>
         <hr>
         <form id="notaForm">
@@ -19,14 +20,17 @@
             <label for="practica">Nota de Práctica:</label>
             <input type="number" id="practica" name="practica" required />
           </div>
+          
           <div class="group-input">
             <label for="medioCurso">Nota de Medio Curso:</label>
             <input type="number" id="medioCurso" name="medioCurso" required />
           </div>
+          
           <div class="group-input">
             <label for="final">Nota Final:</label>
             <input type="number" id="final" name="final" required />
           </div>
+          <hr>
           <div class="footer-modal">
             <button type="submit">Ingresar Nota</button>
           </div>
