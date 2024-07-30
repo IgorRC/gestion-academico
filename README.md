@@ -14,7 +14,7 @@ Este proyecto es una aplicación de gestión académica que permite a los docent
 1. Clona este repositorio:
 
 ```bash
-git clone https://github.com/tu_usuario/tu_repositorio.git
+git clone https://github.com/IgorRC/gestion-academico.git
 ```
 
 ```bash
