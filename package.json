@@ -5,7 +5,7 @@
   "scripts": {
     "test": "jest --coverage",
     "start": "node src/server.js",
-    "build": "npm run build"
+    "build": "echo 'No build required'"
   },
   "keywords": [],
   "author": "",
