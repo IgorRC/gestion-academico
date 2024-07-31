@@ -5,7 +5,7 @@ const Nota = require('../../src/models/nota.model');
 
 
 beforeAll(async () => {
-    const url = `mongodb+srv://igorramoscruzadow:DfNHADURyRRp1Td9@bd-foto-bid.ym97ga4.mongodb.net/?retryWrites=true&w=majority/notas_test`;
+    const url = `mongodb+srv://igorramoscruzadow:DfNHADURyRRp1Td9@bd-foto-bid.ym97ga4.mongodb.net/?retryWrites=true&w=majority`;
     if (mongoose.connection.readyState === 0) {
       await mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
     }

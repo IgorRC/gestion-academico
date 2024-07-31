@@ -9,7 +9,6 @@ const ingresarNota = async (req, res) => {
     }
 
     const nuevaNota = new Nota({ practica, medioCurso, final });
-    console.log(nuevaNota)
     await nuevaNota.save();
 
     res.status(201).json(nuevaNota);
