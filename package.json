@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --config jest.config.js --coverage"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +25,10 @@
     "coverageDirectory": "coverage",
     "collectCoverageFrom": [
       "src/controllers/**/*.js"
-    ]
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
