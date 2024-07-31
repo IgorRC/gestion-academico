@@ -7,7 +7,7 @@ const notaRoutes = require('./routes/nota.routes');
 
 const app = express();
 
-const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://igorramoscruzadow:DfNHADURyRRp1Td9@bd-foto-bid.ym97ga4.mongodb.net/?retryWrites=true&w=majority/notas';
+const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://igorramoscruzadow:DfNHADURyRRp1Td9@bd-foto-bid.ym97ga4.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
