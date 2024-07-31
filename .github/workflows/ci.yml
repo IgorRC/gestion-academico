@@ -45,6 +45,3 @@ jobs:
     - name: Run tests
       run: npm test
 
-- name: Check MongoDB status
-  run: |
-    docker exec ${{ job.services.mongo.id }} mongo --eval 'db.runCommand({ ping: 1 })'
