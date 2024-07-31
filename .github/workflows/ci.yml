@@ -10,7 +10,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     services:
@@ -22,7 +21,7 @@ jobs:
           --health-cmd "mongo --eval 'db.runCommand(\"ping\").ok'" 
           --health-interval 10s 
           --health-timeout 5s 
-          --health-retries 5
+          --health-retries 10
 
     env:
       MONGODB_URI: mongodb://localhost:27017/notas
@@ -38,6 +37,9 @@ jobs:
 
     - name: Install dependencies
       run: npm install
+
+    - name: Wait for MongoDB to be ready
+      run: sleep 30s
 
     - name: Run tests
       run: npm test

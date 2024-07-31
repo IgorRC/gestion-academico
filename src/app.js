@@ -7,7 +7,9 @@ const notaRoutes = require('./routes/nota.routes');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/notas', { useNewUrlParser: true, useUnifiedTopology: true })
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/notas';
+
+mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
