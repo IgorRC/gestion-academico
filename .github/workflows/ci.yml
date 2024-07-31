@@ -28,12 +28,13 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Asegúrate de usar la versión de Node.js compatible
+        node-version: '16'
 
     - name: Install dependencies
       run: npm install
 
+    - name: Wait for MongoDB
+      run: sleep 30 # Esperar 30 segundos para que MongoDB esté listo
+
     - name: Run tests
-      env:
-        MONGO_URL: mongodb://localhost:27017/gestion-academica-test
       run: npm test
