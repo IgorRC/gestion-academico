@@ -26,7 +26,7 @@ jobs:
 
     - name: Run tests
       env:
-        MONGODB_URI: "mongodb+srv://igorramoscruzadow:DfNHADURyRRp1Td9@bd-foto-bid.ym97ga4.mongodb.net/?retryWrites=true&w=majority"
+        MONGODB_URI: "mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority"
       run: npm test
 
     - name: Build application

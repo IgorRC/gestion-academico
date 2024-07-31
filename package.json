@@ -26,5 +26,10 @@
     "collectCoverageFrom": [
       "src/controllers/**/*.js"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.2",
+    "babel-jest": "^29.7.0"
   }
 }
