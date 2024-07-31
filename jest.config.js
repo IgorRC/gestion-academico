@@ -4,7 +4,7 @@ module.exports = {
     },
     testEnvironment: 'node',
     transformIgnorePatterns: [
-      'node_modules/(?!(bson)/)' // Añadir cualquier otro módulo necesario aquí
+      'node_modules/(?!(bson|other-dependency)/)' // Añadir cualquier otro módulo necesario aquí
     ],
   };
   
