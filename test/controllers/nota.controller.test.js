@@ -93,4 +93,22 @@ describe('Notas API', () => {
     expect(response.status).toBe(400);
     expect(response.body.message).toBe('Notas deben estar en el rango de 0 a 20');
   });
+
+  const invalidNotas = [
+    { practica: 25, medioCurso: 18, final: 17, message: 'Notas deben estar en el rango de 0 a 20' },
+    { practica: -5, medioCurso: 18, final: 17, message: 'Notas deben estar en el rango de 0 a 20' },
+    { practica: 15, medioCurso: 22, final: 17, message: 'Notas deben estar en el rango de 0 a 20' },
+    { practica: 15, medioCurso: 18, final: -1, message: 'Notas deben estar en el rango de 0 a 20' },
+  ];
+
+  invalidNotas.forEach((notaInvalida) => {
+    it(`Debe retornar error si las notas no están en el rango de 0 a 20: practica=${notaInvalida.practica}, medioCurso=${notaInvalida.medioCurso}, final=${notaInvalida.final}`, async () => {
+      const response = await request(app)
+        .post('/api/notas')
+        .send(notaInvalida);
+
+      expect(response.status).toBe(400);
+      expect(response.body.message).toBe(notaInvalida.message);
+    });
+  });
 });
