@@ -1,0 +1,13 @@
+[
+    { "practica": 25, "medioCurso": 18, "final": 17, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": -5, "medioCurso": 18, "final": 17, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 15, "medioCurso": 22, "final": 17, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 15, "medioCurso": 18, "final": -1, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 21, "medioCurso": 18, "final": 20, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 20, "medioCurso": -10, "final": 20, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 10, "medioCurso": 18, "final": 30, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 15, "medioCurso": 19, "final": -5, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": -1, "medioCurso": 21, "final": 17, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 30, "medioCurso": 18, "final": 20, "message": "Notas deben estar en el rango de 0 a 20" },
+    { "practica": 18, "medioCurso": 25, "final": 19, "message": "Notas deben estar en el rango de 0 a 20" }
+]
