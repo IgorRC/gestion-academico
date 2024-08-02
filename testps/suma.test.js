@@ -1,10 +1,14 @@
 import suma from "../src/controllers/suma.js";
 
-test('suma de a + b', () => {
-    expect(suma(1, 2)).toBe(3);
-    expect(suma(2, 4)).toBe(6);
-    expect(suma(-1, -1)).toBe(-2);
-    expect(suma(0, 0)).toBe(0);
-    expect(suma(100, 200)).toBe(300);
-
+describe('suma', () => {
+    test.each([
+        [1, 2, 3],
+        [2, 4, 6],
+        [-1, -1, -2],
+        [0, 0, 0],
+        [100, 200, 300]
+    ])('suma de a + b', (a, b, expected) => {
+        expect(suma(a, b)).toBe(expected);
+    });
 });
+
