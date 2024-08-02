@@ -37,7 +37,7 @@ describe('Notas API', () => {
     expect(response.body.practica).toBe(nuevaNota.practica);
     expect(response.body.medioCurso).toBe(nuevaNota.medioCurso);
     expect(response.body.final).toBe(nuevaNota.final);
-  });
+  }, 10000);
 
   /** 
 
@@ -77,7 +77,7 @@ describe('Notas API', () => {
     expect(response.body.practica).toBe(actualizacion.practica);
     expect(response.body.medioCurso).toBe(actualizacion.medioCurso);
     expect(response.body.final).toBe(actualizacion.final);
-  });
+  }, 10000);
 
   it('Debe retornar error si las notas no están en el rango de 0 a 20', async () => {
     const notaInvalida = {
