@@ -5,40 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ACADEMICO | nota</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="/public/icon/academico.png" type="image/x-icon" /> <!-- Favicon -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/public/icon/academico.png" type="image/x-icon" />
+    <!-- Favicon -->
   </head>
   <body>
-    <div class="notas-container">
+    <!-- Navegación -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/public/icon/academico.png" class="nav-logo">ACADEMICO</p></a>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Cursos</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Ventana de Selección de Curso -->
+    <div class="curso-container" id="cursoContainer">
+      <div class="curso-container" id="cursoContainer">
+        <table id="tablaCursos" class="tabla-cursos">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Código</th>
+              <th>Promedio</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Matemáticas</td>
+              <td>MATH101</td>
+              <td>85</td>
+              <td><button class="btnAgregarNota">Agregar Nota</button></td>
+            </tr>
+            <tr>
+              <td>Historia</td>
+              <td>HIST201</td>
+              <td>90</td>
+              <td><button class="btnAgregarNota">Agregar Nota</button></td>
+            </tr>
+            <!-- Agrega más cursos aquí -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Ventana de Ingreso de Nota Académica -->
+    <div class="notas-container" id="notaContainer" style="display: none">
       <div class="container">
         <div class="title-modal">
           <h1>Ingreso de Nota Académica</h1>
         </div>
-        <hr>
+        <hr />
         <form id="notaForm">
           <div class="group-input">
             <label for="practica">Práctica Calificada:</label>
             <input type="number" id="practica" name="practica" required />
           </div>
-          
+
           <div class="group-input">
             <label for="medioCurso">Examen de Medio Curso:</label>
             <input type="number" id="medioCurso" name="medioCurso" required />
           </div>
-          
+
           <div class="group-input">
             <label for="final">Examen Final:</label>
             <input type="number" id="final" name="final" required />
           </div>
-          <hr>
+          <hr />
           <div class="footer-modal">
+            
+            <button type="button" id="btnRegresar">Regresar</button>
             <button type="submit">Ingresar Nota</button>
           </div>
-          
         </form>
         <div id="resultados"></div>
       </div>
     </div>
+
     <script src="index.js"></script>
   </body>
 </html>

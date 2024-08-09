@@ -32,3 +32,25 @@ document.getElementById('notaForm').addEventListener('submit', async (e) => {
     }
   });
   
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const cursoContainer = document.getElementById("cursoContainer");
+    const notaContainer = document.getElementById("notaContainer");
+    const btnsAgregarNota = document.querySelectorAll(".btnAgregarNota");
+    const btnRegresar = document.getElementById("btnRegresar");
+  
+    // Cuando se hace clic en "Agregar Nota"
+    btnsAgregarNota.forEach(function(button) {
+      button.addEventListener("click", function() {
+        cursoContainer.style.display = "none";
+        notaContainer.style.display = "flex";
+      });
+    });
+  
+    // Cuando se hace clic en "Regresar"
+    btnRegresar.addEventListener("click", function() {
+      notaContainer.style.display = "none";
+      cursoContainer.style.display = "block";
+    });
+  });
+  
