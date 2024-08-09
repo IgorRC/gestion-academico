@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
 const notaRoutes = require('./routes/nota.routes');
+const cursoRoutes = require('./routes/curso.routes');
 
 const app = express();
 
@@ -17,5 +18,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/api/notas', notaRoutes);
+app.use('/api/curso', cursoRoutes); 
 
 module.exports = app;
